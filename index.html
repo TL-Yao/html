@@ -86,6 +86,22 @@
 	together.setSeconds(0);
 	together.setMilliseconds(0);
 
+	// var bgAudio = new Audio();
+	// bgAudio.setAttribute("src", "将故事写成我们.mp3");
+	// bgAudio.loop = true;
+	//
+	// bgAudio.play()
+	var audio = document.createElement('audio');//生成一个audio元素
+
+	audio.controls = true;//这样控件才能显示出来
+	audio.autoplay = true;
+	audio.src = '将故事写成我们.mp3';//音乐路径
+
+	audio.load();
+	document.body.appendChild(audio);//把它添加到页面中
+
+
+
 	if (!document.createElement('canvas').getContext) {
 		var msg = document.createElement("div");
 		msg.id = "errorMsg";
